@@ -1,0 +1,71 @@
+body{
+    width: 100%;
+    background-color: wheat;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h4{
+    color: cadetblue;
+}
+
+ul li{
+    list-style: none;
+}
+
+#main-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container{
+    text-align: center;
+    margin: 100px 0;
+}
+
+#search-food{
+    padding: 16px 0;
+    width: 500px;
+    border: 1px solid;
+    outline-color: gray;
+}
+
+#searchBtn{
+    padding: 16px 25px;
+    background-color: salmon;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#foodBank{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.food{
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px gray;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.food-image{
+    width: 300px;
+    height: 300px;
+    cursor: pointer;
+}
+
+.description{
+    width: 35%;
+    margin: 0 auto;
+}
+
+.selected-Image{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+}
