@@ -11,7 +11,9 @@ h4{
 ul li{
     list-style: none;
 }
+/* general style ends here */
 
+/* all other style other than general starts below */
 #main-container{
     width: 90%;
     margin: 0 auto;
@@ -58,6 +60,10 @@ ul li{
     text-align: center;
     padding-top: 20px;
     margin-bottom: 20px;
+}
+
+.food:hover{
+    transform: scale(1.1);
 }
 
 .food-image{

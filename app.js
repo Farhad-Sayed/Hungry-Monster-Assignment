@@ -1,5 +1,4 @@
     // event handler and fetch data
-    
     const searchFoodItems = () =>{
         const searchFood = document.getElementById('search-food').value;
             document.getElementById("search-food").value = "";
@@ -8,7 +7,7 @@
             .then(response => response.json())
             .then(data => {
                 if(searchFood == ''){
-                    alert('Enter a food name for searching your desired item');
+                    alert('Please enter what you are searching for in the search box!');
                 }else{
                     displayFoodItems(data.meals);
                 }
