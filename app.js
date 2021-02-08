@@ -1,20 +1,20 @@
     // event handler and fetch data
-    const searchBtn = document.getElementById('searchBtn');
-    searchBtn.addEventListener('click', function(){
-        const mainContainer = document.getElementById('main-container');
+    
+    const searchFoodItems = () =>{
         const searchFood = document.getElementById('search-food').value;
-        document.getElementById("search-food").value = "";
-                
-        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchFood}`)
-        .then(response => response.json())
-        .then(data => {
-            if(searchFood == ''){
-                alert('Enter a food name for searching your desired item');
-            }else{
-                displayFoodItems(data.meals);
-            }
-        });
-    });
+            document.getElementById("search-food").value = "";
+                    
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchFood}`)
+            .then(response => response.json())
+            .then(data => {
+                if(searchFood == ''){
+                    alert('Enter a food name for searching your desired item');
+                }else{
+                    displayFoodItems(data.meals);
+                }
+            });
+    };
+
 
     // displaying searched items using foreach loop
     const displayFoodItems = meals =>{
@@ -54,12 +54,12 @@
             </div>
         `;
         const ul = document.getElementById('list-item');
-        for (let i = 0; i < 21; i++) {
+        for (let i = 1; i < 21; i++) {
             let ingredient = 'strIngredient' + i;
             let quantity = 'strMeasure' + i;
             const li = document.createElement('li');
             li.innerHTML = `
-                <li></i>${meal[quantity]} ${meal[ingredient]}</li>
+                <li>${meal[quantity]} ${meal[ingredient]}</li>
             `;      
             ul.appendChild(li);  
         }
